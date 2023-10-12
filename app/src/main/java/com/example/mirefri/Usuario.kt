@@ -27,9 +27,9 @@ data class Usuario(
     }
 
     //constructor():this("Samuel", "Quiroz", "samuel@gmail.com","clave123", 0,emptyList());
-    constructor():this("Samuel", "Quiroz", "samuel@gmail.com","clave123", 0, mutableListOf(Productos(),
-        Productos("Mermelada", "se come", 120, 0,1, R.drawable.jam),
-        Productos("Tomate", "se come", 5000, 0,5, R.drawable.tomato)
+    constructor():this("Samuel", "Quiroz", "samuel@gmail.com","clave123", 0, mutableListOf(
+        Productos("Mermelada", "se come", 120, 1,1, R.drawable.jam),
+        Productos("Tomate", "se come", 5000, 1,5, R.drawable.tomato)
     ));
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(nombre)

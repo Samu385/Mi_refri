@@ -17,6 +17,7 @@ class Adapter_cv_inventario(private val productos: MutableList<Productos>):Recyc
     //    Productos("Harina", "se come", 5000, 0,2,R.drawable.flour),
     //    Productos("Bebida", "se come", 2000, 0,3,R.drawable.water)
     //)
+    var onItemClick :((Productos) -> Unit)? = null
 
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
@@ -30,6 +31,9 @@ class Adapter_cv_inventario(private val productos: MutableList<Productos>):Recyc
         holder.itemImage.setImageResource(productos[i].imagenId)
         holder.itemCantidad.text = productos[i].cantidad.toString()
 
+        holder.itemView.setOnClickListener(){
+            onItemClick?.invoke(productos[i])
+        }
     }
 
     override fun getItemCount(): Int {

@@ -32,7 +32,9 @@ class Adapter_cv_compra: RecyclerView.Adapter<Adapter_cv_compra.ViewHolderCompra
         holder.itemDescripcion.text = productos[i].descripcion
         holder.itemImage.setImageResource(productos[i].imagenId)
         holder.btnMinus.setOnClickListener(){
-            productos[i].cantidad = productos[i].cantidad - 1
+            if(productos[i].cantidad - 1>= 0){
+                productos[i].cantidad = productos[i].cantidad - 1
+            }
             onBindViewHolder(holder,i)
         }
         holder.btnAdd.setOnClickListener(){

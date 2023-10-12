@@ -17,7 +17,7 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         user = intent.getParcelableExtra("Usuario") ?: Usuario()
-        Toast.makeText(this,"Hola " +user.nombre,Toast.LENGTH_LONG).show()
+        //Toast.makeText(this,"Hola " +user.nombre,Toast.LENGTH_LONG).show()
         //user = intent.getParcelableExtra("Usuario", Usuario)!!
 
 

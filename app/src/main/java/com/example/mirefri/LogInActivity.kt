@@ -25,11 +25,11 @@ class LogInActivity : AppCompatActivity() {
 
         DefaultUser_btn.setOnClickListener() {
         val usuario = Usuario();
-        Toast.makeText(this,"tamaño " +usuario.listaDeProductos.size, Toast.LENGTH_LONG).show()
+        Toast.makeText(this,"tamaño " +usuario.listaDeProductos.size, Toast.LENGTH_SHORT).show()
 
             if(Check(usuario.nombre, usuario.Clave)){
-            var nextPage = Intent(this, HomeActivity::class.java);
-                nextPage.putExtra("Usuario", usuario)
+            var nextPage = Intent(this, HomeActivity::class.java).putExtra("Usuario", usuario)
+                //nextPage.putExtra("Usuario", usuario)
             startActivity(nextPage);
         }
         }

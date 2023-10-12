@@ -1,15 +1,16 @@
 package com.example.mirefri
 
 import Usuario
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.KeyEvent
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-val adapter = Adapter_cv_compra()
+
+//val adapter = Adapter_cv_compra()
 class ComprarActivity : AppCompatActivity() {
     lateinit var user:Usuario
 
@@ -26,31 +27,52 @@ class ComprarActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
 
         val totalTextView = findViewById<TextView>(R.id.Total_tv)
-
         totalTextView.text = adapter.CalcularToal().toString()
-        Toast.makeText(this,"Click", Toast.LENGTH_LONG).show()
 
         val comprar_btn = findViewById<Button>(R.id.comprar_btn)
 
         comprar_btn.setOnClickListener(){
-            var newList: List<Productos>
+            var nuevaList: MutableList<Productos> = mutableListOf()
+            var index = 0
+            Toast.makeText(this, "Nueva lista: " + nuevaList.size, Toast.LENGTH_SHORT).show()
+
             for(productoBase in adapter.GeTProductos()){
+                var tieneElProducto = false
                 for(misProductos in user.listaDeProductos){
-
-
+                    if(productoBase.id == misProductos.id && productoBase.cantidad > 0 ){
+                        Toast.makeText(this, "Tiene "+productoBase.nombre, Toast.LENGTH_SHORT).show()
+                        misProductos.cantidad += productoBase.cantidad
+                        tieneElProducto = true
+                        break;
+                    }
+                }
+                if(tieneElProducto == false && productoBase.cantidad > 0){
+                    nuevaList.add(productoBase)
+                    index ++
                 }
             }
+            Toast.makeText(this, "Nueva lista: " +nuevaList.size + "i " + index, Toast.LENGTH_SHORT).show()
+
+            for(prodNuevo in nuevaList){
+                user.listaDeProductos.add(prodNuevo)
+            }
+        }
+
+
+        val atras_btn = findViewById<Button>(R.id.LCAtras_btn)
+
+        atras_btn.setOnClickListener(){
+            var nextPage = Intent(this, HomeActivity::class.java).putExtra("Usuario", user)
+            finish()
+            startActivity(nextPage);
         }
     }
 
-    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
-        return super.onKeyDown(keyCode, event)
-        val totalTextView = findViewById<TextView>(R.id.Total_tv)
-
-        totalTextView.text = adapter.CalcularToal().toString()
-        Toast.makeText(this,"Click", Toast.LENGTH_LONG).show()
-
+    override fun onResume() {
+        super.onResume()
+        user = intent.getParcelableExtra("Usuario") ?: Usuario()
     }
+
 
 
 }
