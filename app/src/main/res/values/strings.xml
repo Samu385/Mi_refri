@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">MI refri</string>
+    <string name="AcHome">Home</string>
+    <string name="AcInventario">Inventario</string>
+    <string name="AcListaCompra">Lista de compra</string>
+    <string name="AcLogIn">Iniciar seción</string>
+    <string name="AcLugaresInteres">Lugares de interés</string>
+    <string name="title_activity_login">Log in</string>
+
+    //Activity Log in
+    <string name="LINombre">Nombre</string>
+    <string name="LIApellido">Apellido</string>
+    <string name="LICorreo">Correo</string>
+    <string name="LIClave">Clave</string>
+    <string name="LIRepClave">Repetir clave</string>
+    <string name="LIIniciar">Iniciar</string>
+    <string name="LICrear">Crear cuenta</string>
+    <string name="LIDefault">Usar cuenta por default</string>
+    <string name="LICrearCuenta">Crear cuenta</string>
+
+    //Activity Inventario
+    <string name="AIMisProd">Mis productos</string>
+    <string name="AIdefualtNombre">Nombre</string>
+    <string name="AIdefaultPrecio">Precio</string>
+    <string name="AIdefaultCantidad">Cantidad</string>
+    <string name="AIdefaultDescripcion">Descripción</string>
+    <string name="AIComprar">Comprar</string>
+
+
+    //Activity Comprar
+    <string name="ACProductosDisp">Productos disponibles</string>
+
+
+</resources>
