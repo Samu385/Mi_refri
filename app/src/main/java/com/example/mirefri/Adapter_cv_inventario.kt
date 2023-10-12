@@ -9,15 +9,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class Adapter_cv_inventario:RecyclerView.Adapter<Adapter_cv_inventario.ViewHolder>() {
+class Adapter_cv_inventario(private val productos: MutableList<Productos>):RecyclerView.Adapter<Adapter_cv_inventario.ViewHolder>() {
 
-    var productos: MutableList<Productos> = mutableListOf(Productos(),
-        Productos("Mermelada", "se come", 120, 0,R.drawable.jam),
-        Productos("Queso", "Sale de la leche", 4000, 0,R.drawable.cheese),
-        Productos("Harina", "se come", 5000, 0,R.drawable.flour),
-        Productos("Bebida", "se come", 2000, 0,R.drawable.water),
-        Productos("matequilla", "se come", 2300, 0,R.drawable.butter),
-        )
+    //var productos: MutableList<Productos> = mutableListOf(Productos(),
+    //    Productos("Mermelada", "se come", 120, 0,1,R.drawable.jam),
+    //    Productos("Queso", "Sale de la leche", 4000, 0,1,R.drawable.cheese),
+    //    Productos("Harina", "se come", 5000, 0,2,R.drawable.flour),
+    //    Productos("Bebida", "se come", 2000, 0,3,R.drawable.water)
+    //)
 
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {

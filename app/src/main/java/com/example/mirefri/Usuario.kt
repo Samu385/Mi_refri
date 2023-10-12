@@ -1,6 +1,7 @@
 import android.os.Parcel
 import android.os.Parcelable
 import com.example.mirefri.Productos
+import com.example.mirefri.R
 
 data class Usuario(
     val nombre: String,
@@ -8,7 +9,7 @@ data class Usuario(
     val Correo:String,
     val Clave:String,
     val id: Int,
-    val listaDeProductos: List<Productos>
+    val listaDeProductos: MutableList<Productos>
 
 ):Parcelable  {
 
@@ -18,18 +19,25 @@ data class Usuario(
         parcel.readString().toString(),
         parcel.readString().toString(),
         parcel.readInt(),
-        mutableListOf()
+        mutableListOf<Productos>().apply {
+            parcel.readList(this, Productos::class.java.classLoader)
+        }
+        //mutableListOf()
     ) {
     }
 
-    constructor():this("Samuel", "Quiroz", "samuel@gmail.com","clave123", 0,emptyList());
+    //constructor():this("Samuel", "Quiroz", "samuel@gmail.com","clave123", 0,emptyList());
+    constructor():this("Samuel", "Quiroz", "samuel@gmail.com","clave123", 0, mutableListOf(Productos(),
+        Productos("Mermelada", "se come", 120, 0,1, R.drawable.jam),
+        Productos("Tomate", "se come", 5000, 0,5, R.drawable.tomato)
+    ));
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(nombre)
         parcel.writeString(apellido)
         parcel.writeString(Correo)
         parcel.writeString(Clave)
         parcel.writeInt(id)
-        parcel.writeTypedList(listaDeProductos)
+        parcel.writeList(listaDeProductos)
     }
 
     override fun describeContents(): Int {

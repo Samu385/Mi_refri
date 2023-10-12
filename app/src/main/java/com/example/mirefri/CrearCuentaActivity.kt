@@ -27,7 +27,7 @@ class CrearCuentaActivity : AppCompatActivity() {
 
             if (clave == repetirClave) {
 
-                val usuario = Usuario(nombre, apellido, correo, clave, 1, emptyList())
+                val usuario = Usuario(nombre, apellido, correo, clave, 1, mutableListOf(Productos()))
                 val resultIntent = Intent()
                 resultIntent.putExtra("Usuario", usuario)
                 setResult(RESULT_OK, resultIntent)

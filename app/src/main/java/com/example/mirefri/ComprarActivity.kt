@@ -4,6 +4,7 @@ import Usuario
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.KeyEvent
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -14,12 +15,12 @@ class ComprarActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         user = intent.getParcelableExtra("Usuario") ?: Usuario()
-        Toast.makeText(this,"Hola " +user.nombre, Toast.LENGTH_LONG).show()
+        Toast.makeText(this,"Hola " + user.nombre, Toast.LENGTH_LONG).show()
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_comprar)
         val recyclerView = findViewById<RecyclerView>(R.id.reclicleView)
-        //val adapter = Adapter_cv_compra()
+        val adapter = Adapter_cv_compra()
 
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
@@ -29,6 +30,17 @@ class ComprarActivity : AppCompatActivity() {
         totalTextView.text = adapter.CalcularToal().toString()
         Toast.makeText(this,"Click", Toast.LENGTH_LONG).show()
 
+        val comprar_btn = findViewById<Button>(R.id.comprar_btn)
+
+        comprar_btn.setOnClickListener(){
+            var newList: List<Productos>
+            for(productoBase in adapter.GeTProductos()){
+                for(misProductos in user.listaDeProductos){
+
+
+                }
+            }
+        }
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {

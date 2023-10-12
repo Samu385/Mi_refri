@@ -11,11 +11,12 @@ class InventarioActivity : AppCompatActivity() {
     lateinit var user:Usuario
     override fun onCreate(savedInstanceState: Bundle?) {
         user = intent.getParcelableExtra("Usuario") ?: Usuario()
-        Toast.makeText(this,"Hola " +user.nombre, Toast.LENGTH_LONG).show()
+        //Toast.makeText(this,"Hola " +user.nombre, Toast.LENGTH_LONG).show()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_inventario)
         val recyclerView = findViewById<RecyclerView>(R.id.reclicleView)
-        val adapter = Adapter_cv_inventario()
+        val adapter = Adapter_cv_inventario(user.listaDeProductos)
+        Toast.makeText(this,"tamaño " +user.listaDeProductos.size, Toast.LENGTH_LONG).show()
 
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter

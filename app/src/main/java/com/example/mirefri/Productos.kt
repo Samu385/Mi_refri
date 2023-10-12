@@ -9,6 +9,7 @@ class Productos
     val descripcion:String,
     val precio: Int,
     var cantidad : Int,
+    val id: Int,
     @DrawableRes
     val imagenId: Int
     ):Parcelable {
@@ -17,17 +18,19 @@ class Productos
         parcel.readString().toString(),
         parcel.readInt(),
         parcel.readInt(),
+        parcel.readInt(),
         parcel.readInt()
     ) {
     }
 
-    constructor():this("Pan", "Alimento básico", 1600, 0,R.drawable.bread)
+    constructor():this("Pan", "Alimento básico", 1600, 0,0,R.drawable.bread)
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(nombre)
         parcel.writeString(descripcion)
         parcel.writeInt(precio)
         parcel.writeInt(cantidad)
+        parcel.writeInt(id)
         parcel.writeInt(imagenId)
     }
 

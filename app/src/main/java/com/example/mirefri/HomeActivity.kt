@@ -9,7 +9,7 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 
-class MainActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
     lateinit var user:Usuario
     @RequiresApi(Build.VERSION_CODES.TIRAMISU)
     override fun onCreate(savedInstanceState: Bundle?) {

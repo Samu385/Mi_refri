@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">MI refri</string>
+    <string name="app_name">Mi refri</string>
     <string name="AcHome">Home</string>
     <string name="AcInventario">Inventario</string>
     <string name="AcListaCompra">Lista de compra</string>
-    <string name="AcLogIn">Iniciar seción</string>
+    <string name="AcLogIn">Iniciar sesión</string>
     <string name="AcLugaresInteres">Lugares de interés</string>
     <string name="title_activity_login">Log in</string>
 

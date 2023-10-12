@@ -12,11 +12,12 @@ import androidx.recyclerview.widget.RecyclerView
 class Adapter_cv_compra: RecyclerView.Adapter<Adapter_cv_compra.ViewHolderComprar>() {
 
     var productos: MutableList<Productos> = mutableListOf(Productos(),
-        Productos("Mermelada", "se come", 120, 0,R.drawable.jam),
-        Productos("Queso", "Sale de la leche", 4000, 0, R.drawable.cheese),
-        Productos("Tomate", "se come", 5000, 0, R.drawable.tomato),
-        Productos("Bebida", "se come", 2000, 0,R.drawable.water),
-        Productos("matequilla", "se come", 2300, 0, R.drawable.butter),
+        Productos("Mermelada", "se come", 120, 0,1,R.drawable.jam),
+        Productos("Queso", "Sale de la leche", 4000, 0,1,R.drawable.cheese),
+        Productos("Harina", "se come", 5000, 0,2,R.drawable.flour),
+        Productos("Bebida", "se come", 2000, 0,3,R.drawable.water),
+        Productos("matequilla", "se come", 2300, 0,4,R.drawable.butter),
+        Productos("Tomate", "se come", 5000, 0,5, R.drawable.tomato)
     )
 
 

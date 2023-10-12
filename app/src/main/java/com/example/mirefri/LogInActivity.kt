@@ -4,7 +4,6 @@ import Usuario
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -19,16 +18,18 @@ class LogInActivity : AppCompatActivity() {
 
         Usuarios = mutableListOf(
             Usuario(),
-            Usuario("Manuel","Moscoso","mmoscos@utalca.cl", "clave123",1, emptyList())
+            Usuario("Manuel","Moscoso","mmoscos@utalca.cl", "clave123",1, mutableListOf(Productos()))
         )
         //Default user
         val DefaultUser_btn = findViewById<Button>(R.id.UseDefaultUser_btn)
 
         DefaultUser_btn.setOnClickListener() {
         val usuario = Usuario();
+        Toast.makeText(this,"tamaño " +usuario.listaDeProductos.size, Toast.LENGTH_LONG).show()
 
-        if(Check(usuario.nombre, usuario.Clave)){
-            val nextPage = Intent(this, MainActivity::class.java).putExtra("Usuario", usuario.nombre);
+            if(Check(usuario.nombre, usuario.Clave)){
+            var nextPage = Intent(this, HomeActivity::class.java);
+                nextPage.putExtra("Usuario", usuario)
             startActivity(nextPage);
         }
         }
@@ -42,7 +43,8 @@ class LogInActivity : AppCompatActivity() {
 
 
             if(Check(nombre, clave)){
-                val nextPage = Intent(this, MainActivity::class.java).putExtra("Usuario", GetUser(nombre))
+                val nextPage = Intent(this, HomeActivity::class.java)
+                nextPage.putExtra("Usuario", GetUser(nombre))
                 startActivity(nextPage);
             }else{
                 var claveIncorrecta = false
@@ -76,7 +78,7 @@ class LogInActivity : AppCompatActivity() {
         }
         return false;
     }
-    fun GetUser(nombre:String): Usuario? {
+    fun GetUser(nombre:String): Usuario {
         for (user in Usuarios){
             if(nombre == user.nombre){
                 return user;
@@ -94,7 +96,7 @@ class LogInActivity : AppCompatActivity() {
             Toast.makeText(this,"Nuevo usuario :" + nuevoUsuario!!.nombre,Toast.LENGTH_LONG).show()
             //Log.i("LoginActivity","Nuevo usuario :"+nuevoUsuario!!.nombre)
 
-            Usuarios.add(Usuario(nuevoUsuario.nombre,nuevoUsuario.apellido,nuevoUsuario.Correo,nuevoUsuario.Clave,1,emptyList()
+            Usuarios.add(Usuario(nuevoUsuario.nombre,nuevoUsuario.apellido,nuevoUsuario.Correo,nuevoUsuario.Clave,1,mutableListOf(Productos())
             ))
         }else{
 
