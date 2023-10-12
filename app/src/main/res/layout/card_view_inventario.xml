@@ -16,6 +16,8 @@
         android:id="@+id/card_view_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/CVInventario"
+        android:fadingEdgeLength="10dp"
         android:padding="16dp">
 
         <ImageView
@@ -38,6 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_toEndOf="@id/card_view_image"
             android:text="@string/AIdefualtNombre"
+            android:textColor="@color/ColorTexto"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -49,6 +52,7 @@
             android:layout_marginTop="-0dp"
             android:layout_toEndOf="@id/card_view_image"
             android:text="@string/AIdefaultCantidad"
+            android:textColor="@color/ColorTexto"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -61,6 +65,7 @@
             android:layout_marginTop="0dp"
             android:layout_toEndOf="@id/card_view_image"
             android:text="@string/AIdefaultDescripcion"
+            android:textColor="@color/ColorTexto"
             android:textSize="16sp"
             android:textStyle="bold" />
 

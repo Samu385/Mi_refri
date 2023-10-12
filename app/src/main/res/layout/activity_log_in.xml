@@ -2,8 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/back"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Fondo"
     tools:context=".LogInActivity">
 
     <EditText
@@ -13,6 +15,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="text"
+        android:textColor="@color/ColorTexto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +28,9 @@
         android:layout_marginStart="80dp"
         android:layout_marginTop="108dp"
         android:text="@string/LIClave"
+        android:textColor="@color/ColorTexto"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -36,6 +41,7 @@
         android:layout_marginTop="4dp"
         android:ems="10"
         android:inputType="textPassword"
+        android:textColor="@color/ColorTexto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,19 +54,22 @@
         android:layout_marginStart="80dp"
         android:layout_marginTop="188dp"
         android:text="@string/LINombre"
+        android:textColor="@color/ColorTexto"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <Button
         android:id="@+id/UseDefaultUser_btn"
         android:layout_width="212dp"
-        android:layout_height="37dp"
+        android:layout_height="42dp"
         android:layout_marginBottom="15dp"
+        android:backgroundTint="@color/Botones"
         android:text="@string/LIDefault"
+        android:textColor="@color/ColorTextoClaro"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -68,9 +77,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
+        android:backgroundTint="@color/Botones"
         android:text="@string/LICrear"
+        android:textColor="@color/ColorTextoClaro"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Iniciar_btn" />
 
@@ -78,13 +88,12 @@
         android:id="@+id/Iniciar_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
-        android:layout_marginEnd="162dp"
-        android:layout_marginBottom="124dp"
+        android:layout_marginBottom="128dp"
+        android:backgroundTint="@color/Botones"
         android:text="@string/LIIniciar"
+        android:textColor="@color/ColorTextoClaro"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -93,7 +102,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:text="@string/AcLogIn"
+        android:textColor="@color/ColorTexto"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"

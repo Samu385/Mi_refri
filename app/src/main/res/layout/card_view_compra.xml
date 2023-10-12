@@ -16,6 +16,7 @@
         android:id="@+id/card_view_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/CVCompra"
         android:padding="16dp">
 
         <ImageView
@@ -38,28 +39,31 @@
             android:layout_height="wrap_content"
             android:layout_toEndOf="@id/card_view_image"
             android:text="@string/AIdefualtNombre"
-            android:textStyle="bold"
-            android:textSize="16sp" />
+            android:textColor="@color/ColorTexto"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/card_view_precio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/card_view_nombre"
-            android:textStyle="bold"
             android:layout_toEndOf="@id/card_view_image"
+            android:text="@string/AIdefaultPrecio"
+            android:textColor="@color/ColorTexto"
             android:textSize="16sp"
-            android:text="@string/AIdefaultPrecio" />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/card_view_descripcion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/card_view_precio"
-            android:textStyle="bold"
             android:layout_toEndOf="@id/card_view_image"
+            android:text="@string/AIdefaultDescripcion"
+            android:textColor="@color/ColorTexto"
             android:textSize="16sp"
-            android:text="@string/AIdefaultDescripcion" />
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/minus_btn"
@@ -93,11 +97,14 @@
             android:id="@+id/card_view_cant_comprar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@id/minus_btn"
             android:layout_alignEnd="@id/minus_btn"
-            android:layout_marginTop="-25dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="8dp"
             android:layout_marginRight="-5dp"
-            android:text="0" />
+            android:text="0"
+            android:textColor="@color/ColorTexto"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
 
     </RelativeLayout>

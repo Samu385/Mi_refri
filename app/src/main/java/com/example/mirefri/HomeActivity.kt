@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
+//import android.widget.Toast
 import androidx.annotation.RequiresApi
 
 class HomeActivity : AppCompatActivity() {
@@ -17,18 +18,23 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         user = intent.getParcelableExtra("Usuario") ?: Usuario()
-        Toast.makeText(this,"Hola " +user.nombre,Toast.LENGTH_LONG).show()
-        //user = intent.getParcelableExtra("Usuario", Usuario)!!
-
 
         val inventariobtn = findViewById<Button>(R.id.inventario_btn)
+        val comprarbtn = findViewById<Button>(R.id.listaCompra_btn)
+        val lugaresInteresbtn = findViewById<Button>(R.id.lugaresInteres_btn)
+
+
+
         inventariobtn.setOnClickListener(){
             val nextPage = Intent(this, InventarioActivity::class.java).putExtra("Usuario", user)
             startActivity(nextPage);
         }
-        val comprarbtn = findViewById<Button>(R.id.listaCompra_btn)
         comprarbtn.setOnClickListener(){
             val nextPage = Intent(this, ComprarActivity::class.java).putExtra("Usuario", user)
+            startActivity(nextPage);
+        }
+        lugaresInteresbtn.setOnClickListener(){
+            val nextPage = Intent(this, LugaresDeInteres::class.java).putExtra("Usuario", user)
             startActivity(nextPage);
         }
 

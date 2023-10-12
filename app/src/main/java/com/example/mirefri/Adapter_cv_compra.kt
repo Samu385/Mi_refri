@@ -1,6 +1,5 @@
 package com.example.mirefri
 
-import android.content.res.Resources
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,12 +11,13 @@ import androidx.recyclerview.widget.RecyclerView
 class Adapter_cv_compra: RecyclerView.Adapter<Adapter_cv_compra.ViewHolderComprar>() {
 
     var productos: MutableList<Productos> = mutableListOf(Productos(),
-        Productos("Mermelada", "se come", 120, 0,1,R.drawable.jam),
-        Productos("Queso", "Sale de la leche", 4000, 0,1,R.drawable.cheese),
-        Productos("Harina", "se come", 5000, 0,2,R.drawable.flour),
-        Productos("Bebida", "se come", 2000, 0,3,R.drawable.water),
-        Productos("matequilla", "se come", 2300, 0,4,R.drawable.butter),
-        Productos("Tomate", "se come", 5000, 0,5, R.drawable.tomato)
+        Productos("Mermelada", "Usada para untar el pan", 120, 0,1,R.drawable.jam),
+        Productos("Bebida", "Bebestible", 2000, 0,3,R.drawable.water),
+        Productos("Harina", "Usada para pasteles o pan", 5000, 0,2,R.drawable.flour),
+        Productos("matequilla", "Usada para untar el pan", 2300, 0,4,R.drawable.butter),
+        Productos("Tomate", "Usada para ensaladas", 5000, 0,5, R.drawable.tomato),
+        Productos("Queso", "Sale de la leche", 4000, 0,6,R.drawable.cheese)
+
     )
 
 
@@ -32,7 +32,9 @@ class Adapter_cv_compra: RecyclerView.Adapter<Adapter_cv_compra.ViewHolderCompra
         holder.itemDescripcion.text = productos[i].descripcion
         holder.itemImage.setImageResource(productos[i].imagenId)
         holder.btnMinus.setOnClickListener(){
-            productos[i].cantidad = productos[i].cantidad - 1
+            if(productos[i].cantidad - 1>= 0){
+                productos[i].cantidad = productos[i].cantidad - 1
+            }
             onBindViewHolder(holder,i)
         }
         holder.btnAdd.setOnClickListener(){

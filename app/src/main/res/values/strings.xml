@@ -6,6 +6,8 @@
     <string name="AcLogIn">Iniciar sesión</string>
     <string name="AcLugaresInteres">Lugares de interés</string>
     <string name="title_activity_login">Log in</string>
+    <string name="Atras">Atrás</string>
+    <string name="DSigno">$</string>
 
     //Activity Log in
     <string name="LINombre">Nombre</string>
@@ -29,6 +31,14 @@
 
     //Activity Comprar
     <string name="ACProductosDisp">Productos disponibles</string>
+
+    //Activity Detalles
+    <string name="DGuadarSalir"> Guardar y salir </string>
+
+    //Activity Lugares interesantes
+    <string name="LIDescripcion">Descripción</string>
+    <string name="LIDIreccion">Dirección</string>
+    <string name="LITipo">Tipo</string>
 
 
 </resources>

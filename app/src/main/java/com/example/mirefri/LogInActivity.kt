@@ -1,6 +1,7 @@
 package com.example.mirefri
 
 import Usuario
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -12,6 +13,7 @@ import android.widget.Toast
 class LogInActivity : AppCompatActivity() {
     private lateinit var Usuarios : MutableList<Usuario>
 
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_log_in)
@@ -25,11 +27,10 @@ class LogInActivity : AppCompatActivity() {
 
         DefaultUser_btn.setOnClickListener() {
         val usuario = Usuario();
-        Toast.makeText(this,"tamaño " +usuario.listaDeProductos.size, Toast.LENGTH_LONG).show()
 
             if(Check(usuario.nombre, usuario.Clave)){
-            var nextPage = Intent(this, HomeActivity::class.java);
-                nextPage.putExtra("Usuario", usuario)
+            var nextPage = Intent(this, HomeActivity::class.java).putExtra("Usuario", usuario)
+            finish()
             startActivity(nextPage);
         }
         }
@@ -45,6 +46,7 @@ class LogInActivity : AppCompatActivity() {
             if(Check(nombre, clave)){
                 val nextPage = Intent(this, HomeActivity::class.java)
                 nextPage.putExtra("Usuario", GetUser(nombre))
+                finish()
                 startActivity(nextPage);
             }else{
                 var claveIncorrecta = false

@@ -2,7 +2,11 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="Fondo">#9FB0BD</color>
+    <color name="Fondo">#C3D2B8</color>
     <color name="ColorTexto">#03164F</color>
-    <color name="Botones">#DFF581</color>
+    <color name="ColorTextoClaro">#FFFFFFFF</color>
+    <color name="Botones">#3E7C59</color>
+    <color name="CVInventario">#E0F5E7</color>
+    <color name="CVCompra">#E0F5E7</color>
+    <color name="CVLugaresInteres">#E0F5E7</color>
 </resources>
