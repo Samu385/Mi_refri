@@ -4,11 +4,19 @@ REQUERIMIENTOS FUNCIONALES:
 	La aplicación debe contar con una pantalla de compra de productos, los cuales deben añadirse al inventario
 	La aplicación debe contar con una pantalla para gestionar lugares de interés
 	La aplicación debe tener todos los textos y colores en un archivo XML
+	La aplicación debe tener recordatorios que se eliminen una semana despu{es de agregarlos
+	La aplicación debe poder guardar el inventario en una base de datos manejada en firebase
+	La aplicación debe tener un ícono vectorizado
 
 REQUERIMIENTOS NO FUNCIONALES:
 	La aplicación debe ser intuitiva para cualquier tipo de usuario
 	La aplicación debe usar una paleta de colores adecuada al tema
 	La aplicación debe guardar bien los datos de los usuarios
+	La aplicación debe ser fluida
+	Los tiempos de carga no deben superar los 5 segundos
+	Se debe validar la identidad de los usuarios
+	Debe matener informado al usuario de lo que está pasando en cada momento
+	La aplicación debe ser capaz de soportar hasta 10.000 usuarios concurrentes
 
 Link video de presentación: https://youtu.be/bn-cFM3F3ek
 Link APK: https://drive.google.com/drive/folders/1hMNmQ2kMFMmyeOEITJyRZAa8by8hADkO?usp=sharing 

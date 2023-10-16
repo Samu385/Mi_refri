@@ -14,6 +14,11 @@ class InventarioActivity : AppCompatActivity() {
     lateinit var adapter:Adapter_cv_inventario
     override fun onCreate(savedInstanceState: Bundle?) {
         user = intent.getParcelableExtra("Usuario") ?: Usuario()
+        if(user == null){
+            Toast.makeText(this,"User null", Toast.LENGTH_LONG).show()
+        }else{
+            Toast.makeText(this,"User NO null", Toast.LENGTH_LONG).show()
+        }
         //Toast.makeText(this,"Hola " +user.nombre, Toast.LENGTH_LONG).show()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_inventario)
@@ -27,6 +32,7 @@ class InventarioActivity : AppCompatActivity() {
         adapter.onItemClick = {
             val intent = Intent(this, DetallesActivity::class.java)
             intent.putExtra("Producto", it)
+            intent.putExtra("Usuario", user)
             startActivityForResult(intent,2)
             finish()
             //startActivity(intent)
@@ -43,6 +49,9 @@ class InventarioActivity : AppCompatActivity() {
 
     }
 
+    override fun onResume() {
+        super.onResume()
+    }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 

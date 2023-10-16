@@ -1,5 +1,6 @@
 package com.example.mirefri
 
+import Usuario
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,11 +9,13 @@ import android.widget.ImageView
 import android.widget.TextView
 
 class DetallesActivity : AppCompatActivity() {
+    lateinit var user:Usuario
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detalles)
 
         val producto = intent.getParcelableExtra<Productos>("Producto")
+        user = intent.getParcelableExtra("Usuario") ?: Usuario()
 
         if(producto != null){
             val nombreTV = findViewById<TextView>(R.id.Nombre_detalles)
@@ -36,12 +39,19 @@ class DetallesActivity : AppCompatActivity() {
             atrasbtn.setOnClickListener(){
                 val resultIntent = Intent(this, InventarioActivity::class.java)
                 setResult(RESULT_CANCELED, resultIntent)
+                resultIntent.putExtra("Usuario", user)
                 finish()
                 startActivity(resultIntent)
             }
             guardarSalirbtn.setOnClickListener(){
                 val resultIntent = Intent(this, InventarioActivity::class.java)
                 resultIntent.putExtra("Producto", producto)
+                resultIntent.putExtra("Usuario", user)
+                for(miProd in user.listaDeProductos){
+                    if(miProd.id == producto.id){
+                        miProd.cantidad =producto.cantidad
+                    }
+                }
                 setResult(RESULT_OK, resultIntent)
                 finish()
                 startActivity(resultIntent)
