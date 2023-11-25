@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/DialogTituloOrdenar"
+        android:textColor="@color/ColorTexto"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/nombreDialogOrdenar"
+        android:layout_width="289dp"
+        android:layout_height="59dp"
+        android:hint="@string/DialogNombreP"
+        android:imeOptions="actionNext"
+        android:inputType="text" />
+
+
+    <Spinner
+        android:id="@+id/categoriaSpinnerOrdenar"
+        android:layout_width="292dp"
+        android:layout_height="40dp"
+        android:entries="@array/categorias_array" />
+
+    <Button
+        android:id="@+id/submit_buttonOrdenar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/DialogBuscarP" />
+
+    <Button
+        android:id="@+id/submit_buttonNoOrdenar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/DialogBuscarTodosP" />
+
+</LinearLayout>

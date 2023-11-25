@@ -13,6 +13,18 @@
         android:theme="@style/Theme.MIRefri"
         tools:targetApi="31">
         <activity
+            android:name=".Detalles_prod_inventario_bd"
+            android:exported="false" />
+        <activity
+            android:name=".Detalles_prod_comprar_bd"
+            android:exported="false" />
+        <activity
+            android:name=".Registros"
+            android:exported="false" />
+        <activity
+            android:name=".CambiarIdioma"
+            android:exported="false" />
+        <activity
             android:name=".DetallesLugaresDeInteres"
             android:exported="false" />
         <activity

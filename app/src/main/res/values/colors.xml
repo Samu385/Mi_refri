@@ -9,4 +9,10 @@
     <color name="CVInventario">#E0F5E7</color>
     <color name="CVCompra">#E0F5E7</color>
     <color name="CVLugaresInteres">#E0F5E7</color>
+
+
+
+    //Style toolbar
+    <color name="FondoToolbar">#96B18B</color>
+    <color name="AtrasToolbar">#000B2E</color>
 </resources>

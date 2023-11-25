@@ -21,8 +21,6 @@ class HomeActivity : AppCompatActivity() {
 
         val inventariobtn = findViewById<Button>(R.id.inventario_btn)
         val comprarbtn = findViewById<Button>(R.id.listaCompra_btn)
-        val lugaresInteresbtn = findViewById<Button>(R.id.lugaresInteres_btn)
-
 
 
         inventariobtn.setOnClickListener(){
@@ -31,10 +29,6 @@ class HomeActivity : AppCompatActivity() {
         }
         comprarbtn.setOnClickListener(){
             val nextPage = Intent(this, ComprarActivity::class.java).putExtra("Usuario", user)
-            startActivity(nextPage);
-        }
-        lugaresInteresbtn.setOnClickListener(){
-            val nextPage = Intent(this, LugaresDeInteres::class.java).putExtra("Usuario", user)
             startActivity(nextPage);
         }
 

@@ -39,12 +39,13 @@ class Adapter_cv_inventario(private val productos: MutableList<Productos>):Recyc
         var itemCantidad:TextView
 
         init{
-            itemImage = itemView.findViewById(R.id.card_view_image)
-            itemNombre = itemView.findViewById(R.id.card_view_nombre)
-            itemDescripcion = itemView.findViewById(R.id.card_view_descripcion)
-            itemCantidad = itemView.findViewById(R.id.card_view_cantidad)
+            itemImage = itemView.findViewById(R.id.card_view_cantidad_inv_original)
+            itemNombre = itemView.findViewById(R.id.card_view_nombre_inv_original)
+            itemDescripcion = itemView.findViewById(R.id.card_view_descripcion_inv_original)
+            itemCantidad = itemView.findViewById(R.id.card_view_cantidad_inv_original)
 
         }
     }
+
 
 }

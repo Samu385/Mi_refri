@@ -19,60 +19,44 @@
         android:background="@color/CVCompra"
         android:padding="16dp">
 
-        <ImageView
-            android:id="@+id/cv_comp_image_original"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="false"
-            android:layout_alignParentBottom="false"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="12dp" />
-
         <TextView
-            android:id="@+id/cv_comp_nombre_original"
+            android:id="@+id/cv_compbd_nombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/cv_comp_image_original"
             android:text="@string/AIdefualtNombre"
             android:textColor="@color/ColorTexto"
             android:textSize="16sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/cv_comp_precio_original"
+            android:id="@+id/cv_compbd_precio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/cv_comp_nombre_original"
-            android:layout_toEndOf="@id/cv_comp_image_original"
+            android:layout_below="@id/cv_compbd_nombre"
             android:text="@string/AIdefaultPrecio"
             android:textColor="@color/ColorTexto"
             android:textSize="16sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/cv_comp_descripcion_original"
+            android:id="@+id/cv_compbd_categoria"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/cv_comp_precio_original"
-            android:layout_toEndOf="@id/cv_comp_image_original"
-            android:text="@string/AIdefaultDescripcion"
+            android:layout_below="@+id/cv_compbd_precio"
+            android:layout_marginTop="0dp"
+            android:text="@string/AICategoria"
             android:textColor="@color/ColorTexto"
             android:textSize="16sp"
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/cv_comp_minus_btn_original"
+            android:id="@+id/cv_compbd_minus_btn"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_below="@id/cv_comp_image_original"
+            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="-60dp"
-            android:layout_marginEnd="45dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="69dp"
             android:background="@drawable/minus"
             android:shadowColor="#000000"
             android:textColorHighlight="#FFFFFF"
@@ -80,13 +64,13 @@
             android:visibility="visible" />
 
         <Button
-            android:id="@+id/cv_comp_add_btn_original"
+            android:id="@+id/cv_compbd_add_btn"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_below="@id/cv_comp_image_original"
+            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="-60dp"
-            android:layout_marginEnd="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
             android:background="@drawable/add"
             android:shadowColor="#000000"
             android:textColorHighlight="#FFFFFF"
@@ -94,13 +78,13 @@
             android:visibility="visible" />
 
         <TextView
-            android:id="@+id/cv_comp_cantidad_original"
+            android:id="@+id/cv_compbd_cantidad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@id/cv_comp_minus_btn_original"
+            android:layout_alignEnd="@id/cv_compbd_minus_btn"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="-5dp"
+            android:layout_marginTop="-2dp"
+            android:layout_marginRight="-13dp"
             android:text="0"
             android:textColor="@color/ColorTexto"
             android:textSize="16sp"

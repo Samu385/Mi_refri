@@ -55,7 +55,7 @@ class Adapter_cv_compra: RecyclerView.Adapter<Adapter_cv_compra.ViewHolderCompra
         }
         return total
     }
-    fun GeTProductos():MutableList<Productos>{
+    fun GetProductos():MutableList<Productos>{
         return productos
     }
 
@@ -69,13 +69,13 @@ class Adapter_cv_compra: RecyclerView.Adapter<Adapter_cv_compra.ViewHolderCompra
         var btnAdd:Button
 
         init{
-            itemImage = itemView.findViewById(R.id.card_view_image)
-            itemNombre = itemView.findViewById(R.id.card_view_nombre)
-            itemPrecio = itemView.findViewById(R.id.card_view_precio)
-            itemDescripcion = itemView.findViewById(R.id.card_view_descripcion)
-            itemCantidad = itemView.findViewById(R.id.card_view_cant_comprar)
-            btnMinus = itemView.findViewById(R.id.minus_btn)
-            btnAdd = itemView.findViewById(R.id.add_btn)
+            itemImage = itemView.findViewById(R.id.cv_comp_image_original)
+            itemNombre = itemView.findViewById(R.id.cv_comp_nombre_original)
+            itemPrecio = itemView.findViewById(R.id.cv_comp_precio_original)
+            itemDescripcion = itemView.findViewById(R.id.cv_comp_descripcion_original)
+            itemCantidad = itemView.findViewById(R.id.cv_comp_cantidad_original)
+            btnMinus = itemView.findViewById(R.id.cv_comp_minus_btn_original)
+            btnAdd = itemView.findViewById(R.id.cv_comp_add_btn_original)
 
         }
     }

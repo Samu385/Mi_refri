@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mi refri</string>
+    <string name="AcHome">Home</string>
+    <string name="AcInventario">Inventory</string>
+    <string name="AcListaCompra">shopping list</string>
+    <string name="AcDetallesProducto">Products detail</string>
+    <string name="AcLogIn">Log in</string>
+    <string name="AcLugaresInteres">Places of interest</string>
+    <string name="title_activity_login">Log in</string>
+    <string name="Atras">Back</string>
+    <string name="DSigno">$</string>
+
+    //Activity Log in
+    <string name="LINombre">Name</string>
+    <string name="LIApellido">Last Name</string>
+    <string name="LICorreo">Email</string>
+    <string name="LIClave">Password</string>
+    <string name="LIRepClave">Repeat password</string>
+    <string name="LIIniciar">Start</string>
+    <string name="LICrear">Create account</string>
+    <string name="LIDefault">Use default account</string>
+    <string name="LICrearCuenta">Create account</string>
+
+    //Activity Inventario
+    <string name="AIMisProd">My products</string>
+    <string name="AIdefualtNombre">Name</string>
+    <string name="AIdefaultPrecio">Price</string>
+    <string name="AIdefualtID">ID</string>
+    <string name="AIdefaultCantidad">Amount</string>
+    <string name="AIdefaultDescripcion">Description</string>
+    <string name="AIComprar">Buy</string>
+    <string name="AICategoria">Category</string>
+
+
+    //Activity Comprar
+    <string name="ACProductosDisp">Available products</string>
+    <string name="ACAñadir">Add</string>
+
+
+    //Activity Detalles
+    <string name="DGuadarSalir"> Save and exit </string>
+    <string name="DEditar"> Edit </string>
+    <string name="DEliminar"> Delete </string>
+    <string name="DGuardar"> Save </string>
+    <string name="DOrdernarPor"> Sort by </string>
+
+    //Activity Lugares interesantes
+    <string name="LIDescripcion">Description</string>
+    <string name="LIDIreccion">Address</string>
+    <string name="LITipo">Type</string>
+
+    //Acvtivity Cambio idoma
+    <string name="CITitulo">Change language</string>
+    <string name="CICambiarIdioma">Change language</string>
+    <string name="CIIdioma">Language</string>
+    <string name="CIespañol">Español</string>
+    <string name="CIingles">English</string>
+
+    //Dialog crear producto
+    <string name="DialogTitulo">Create product</string>
+    <string name="DialogTituloEditar">Edit product</string>
+    <string name="DialogTituloOrdenar">Sort by</string>
+    <string name="DialogNombreP">Product name</string>
+    <string name="DialogDescripcionP">Description</string>
+    <string name="DialogCategoriaP">Category</string>
+    <string name="DialogPrecioP">Price</string>
+    <string name="DialogListoP">submit</string>
+    <string name="DialogBuscarP">Search</string>
+    <string name="DialogBuscarTodosP">Show all</string>
+
+    //Registro
+    <string name="RCrear">: Creation</string>
+    <string name="RCrearDesc">The product was created</string>
+    <string name="RActualizarParam">: Update values</string>
+    <string name="RActualizarParamDesc">Product values updated</string>
+    <string name="RActualizarCant">: Update amount</string>
+    <string name="RActualizarCantDesc">The number of products in the inventory was updated</string>
+
+</resources>

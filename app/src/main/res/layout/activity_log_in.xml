@@ -8,6 +8,9 @@
     android:background="@color/Fondo"
     tools:context=".LogInActivity">
 
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar" />
     <EditText
         android:id="@+id/CorreoAC_IF"
         android:layout_width="210dp"
@@ -52,13 +55,13 @@
         android:layout_width="wrap_content"
         android:layout_height="27dp"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="188dp"
+        android:layout_marginTop="201dp"
         android:text="@string/LINombre"
         android:textColor="@color/ColorTexto"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/include" />
 
     <Button
         android:id="@+id/UseDefaultUser_btn"
@@ -73,22 +76,10 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/CreateUser_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:backgroundTint="@color/Botones"
-        android:text="@string/LICrear"
-        android:textColor="@color/ColorTextoClaro"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Iniciar_btn" />
-
-    <Button
         android:id="@+id/Iniciar_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="128dp"
+        android:layout_marginBottom="60dp"
         android:backgroundTint="@color/Botones"
         android:text="@string/LIIniciar"
         android:textColor="@color/ColorTextoClaro"
@@ -96,27 +87,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:text="@string/AcLogIn"
-        android:textColor="@color/ColorTexto"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="139dp"
         android:layout_height="103dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="33dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/include"
         app:srcCompat="@drawable/user" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

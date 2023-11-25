@@ -13,58 +13,58 @@
     card_view:contentPadding="4dp">
 
     <RelativeLayout
-        android:id="@+id/card_view_layout"
+        android:id="@+id/card_view_layout_bd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/CVInventario"
         android:fadingEdgeLength="10dp"
         android:padding="16dp">
 
-        <ImageView
-            android:id="@+id/card_view_image_inv_original"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="false"
-            android:layout_alignParentBottom="false"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="12dp" />
-
         <TextView
-            android:id="@+id/card_view_nombre_inv_original"
+            android:id="@+id/card_view_nombre_inv_bd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/card_view_image_inv_original"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
             android:text="@string/AIdefualtNombre"
             android:textColor="@color/ColorTexto"
             android:textSize="16sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/card_view_cantidad_inv_original"
+            android:id="@+id/card_view_cantidad_inv_bd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/card_view_nombre_inv_original"
-            android:layout_marginTop="-0dp"
-            android:layout_toEndOf="@id/card_view_image_inv_original"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="35dp"
             android:text="@string/AIdefaultCantidad"
             android:textColor="@color/ColorTexto"
             android:textSize="16sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/card_view_descripcion_inv_original"
+            android:id="@+id/card_view_descripcion_inv_bd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/card_view_cantidad_inv_original"
+            android:layout_below="@+id/card_view_categoria_inv_bd"
             android:layout_marginStart="0dp"
-            android:layout_marginTop="0dp"
-            android:layout_toEndOf="@id/card_view_image_inv_original"
+            android:layout_marginTop="4dp"
             android:text="@string/AIdefaultDescripcion"
+            android:textColor="@color/ColorTexto"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/card_view_categoria_inv_bd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card_view_nombre_inv_bd"
+            android:layout_marginTop="4dp"
+            android:text="@string/AICategoria"
             android:textColor="@color/ColorTexto"
             android:textSize="16sp"
             android:textStyle="bold" />

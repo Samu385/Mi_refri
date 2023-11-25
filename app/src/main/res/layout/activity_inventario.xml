@@ -6,19 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/Fondo"
     tools:context=".InventarioActivity">
-
-    <TextView
-        android:id="@+id/AITitulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/AcInventario"
-        android:textColor="@color/ColorTexto"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <include layout="@layout/toolbar"/>
 
     <TextView
         android:id="@+id/textView7"
@@ -35,24 +23,13 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/reclicleView"
+        android:id="@+id/reclicleView_inventario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="6dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
+        android:scrollbars="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-    <Button
-        android:id="@+id/IAtras_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="12dp"
-        android:backgroundTint="@color/Botones"
-        android:text="@string/Atras"
-        android:textColor="@color/ColorTextoClaro"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Mi refri</string>
     <string name="AcHome">Home</string>
@@ -36,6 +37,7 @@
     <string name="ACProductosDisp">Productos disponibles</string>
     <string name="ACAñadir">Añadir</string>
 
+
     //Activity Detalles
     <string name="DGuadarSalir"> Guardar y salir </string>
     <string name="DEditar"> Editar </string>
@@ -57,11 +59,11 @@
 
     //Dialog crear producto
     <string name="DialogTitulo">Crear producto</string>
-    <string name="DialogTituloEditar">Editar producto</string>
     <string name="DialogTituloOrdenar">Ordenar por</string>
+    <string name="DialogTituloEditar">Editar producto</string>
     <string name="DialogNombreP">Nombre del producto</string>
     <string name="DialogDescripcionP">Descripcion</string>
-    <string name="DialogCategoriaP">Categoria</string>
+    <string name="DialogCategoriaP">Categoría</string>
     <string name="DialogPrecioP">Precio</string>
     <string name="DialogListoP">Listo</string>
     <string name="DialogBuscarP">Buscar</string>
@@ -74,7 +76,5 @@
     <string name="RActualizarParamDesc">Se actualizaron los valores del producto</string>
     <string name="RActualizarCant">: Actualizar cantidad</string>
     <string name="RActualizarCantDesc">Se actualizó la cantidad de productos en el inventario</string>
-
-
 
 </resources>

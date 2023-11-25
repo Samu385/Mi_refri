@@ -1,10 +1,13 @@
 package com.example.mirefri
 
+import MyToolbar
 import Usuario
 import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -61,16 +64,7 @@ class LogInActivity : AppCompatActivity() {
                 }
             }
         }
-
-
-        //Create user
-
-        val CreateUser_btn = findViewById<Button>(R.id.CreateUser_btn)
-
-        CreateUser_btn.setOnClickListener(){
-            val nextPage = Intent(this, CrearCuentaActivity::class.java)
-            startActivityForResult(nextPage,1);
-        }
+        MyToolbar().Show(this,this.getString(R.string.AcLogIn))
     }
     fun Check(nombre:String, clave : String): Boolean {
         for (user in Usuarios){
@@ -88,7 +82,24 @@ class LogInActivity : AppCompatActivity() {
         }
         return Usuario()
     }
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.log_in_opciones,menu)
+        return super.onCreateOptionsMenu(menu)
+    }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        if(item.itemId == R.id.cambiarIdioma_opcionLogin){
+            val nextPage = Intent(this, CambiarIdioma::class.java)
+            startActivity(nextPage)
+        }
+        if(item.itemId == R.id.crearCuenta_opcionLogin){
+            val nextPage = Intent(this, CrearCuentaActivity::class.java)
+            startActivity(nextPage)
+        }
+
+        return super.onOptionsItemSelected(item)
+    }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if(requestCode == 1 && resultCode == RESULT_OK){

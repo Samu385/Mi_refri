@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/editarOpcion_inv"
+        android:title="@string/DEditar"
+        />
+    <item
+        android:id="@+id/guardarOpcion_inv"
+        android:title="@string/DGuardar"
+        />
+    <item
+        android:id="@+id/eliminarOpcion_inv"
+        android:title="@string/DEliminar"
+        />
+
+
+</menu>
