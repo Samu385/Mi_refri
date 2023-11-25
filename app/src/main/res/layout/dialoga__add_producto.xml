@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/DialogTitulo"
+        android:textColor="@color/ColorTexto"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/nombreDialog"
+        android:layout_width="289dp"
+        android:layout_height="59dp"
+        android:hint="@string/DialogNombreP"
+        android:imeOptions="actionNext"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/descripcionDialog"
+        android:layout_width="291dp"
+        android:layout_height="60dp"
+        android:hint="@string/DialogDescripcionP"
+        android:imeOptions="actionNext"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/precioDialog"
+        android:layout_width="292dp"
+        android:layout_height="61dp"
+        android:hint="@string/DialogPrecioP"
+        android:imeOptions="actionNext"
+        android:inputType="number" />
+
+
+    <Spinner
+        android:id="@+id/categoriaSpinner"
+        android:layout_width="292dp"
+        android:layout_height="40dp"
+        android:entries="@array/categorias_array" />
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:background="@color/Botones"
+        android:text="@string/DialogListoP"
+        android:textColor="@color/white" />
+</LinearLayout>

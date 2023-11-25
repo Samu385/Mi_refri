@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/cambiarIdioma_opcionLogin"
+        android:title="@string/CICambiarIdioma"
+        />
+    <item
+        android:id="@+id/crearCuenta_opcionLogin"
+        android:title="@string/LICrearCuenta"
+        />
+
+
+</menu>
